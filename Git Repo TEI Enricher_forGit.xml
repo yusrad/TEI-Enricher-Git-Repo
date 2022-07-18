@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>TEI Enricher Git Repository</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>ACDH-CH</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <p>How to TEI Enricher 101:
+            The .xml file you'll be working on is always saved in "name of folder you assigned" --> 102_derived_tei.
+            It's important to download and extract the .zip-file in a file directory where you can write --> 
+            <hi rend="bold">not</hi> directly on the Desktop, but rather create a new folder in :c, unzip the Enricher file there and save the files you will be working on all in same place. 
+            Another important piece of information: TEI Enricher does not run on Mac or Linux, only Windows.
+            If you're having issues with seeing the part of the Enricher responsible for navigating the dicitionary data and for editing any meta-data and visualising the entries,
+            try playing around with the panel width and see which values work (better) - there're unfortunately no one size fits all values
+            since every pc's resolution is different so you just have to try what works for you.
+            CTRL + F3 transforms your .xml file and let's you see it in the browser, ALT + F3 does indents and structures your .xml file. 
+            F7 opens a new window suggesting elements which can be nestled into your tree.</p>
+      </body>
+  </text>
+</TEI>
