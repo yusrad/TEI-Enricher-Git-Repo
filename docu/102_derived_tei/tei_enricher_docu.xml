@@ -133,12 +133,12 @@
 
                      <table>
                         <row><cell role="tdTableHead">Short Cut / Key</cell><cell role="tdTableHead">Function</cell></row>
-                        <row><cell></cell><cell>
+                        <row><cell/><cell>
                               <name type="appPart">Create New Environment + New Doc. from Templ.</name> creates the
                               basic structures for the new project: HTML output path, CSS file, XSLT file.</cell></row>
-                        <row><cell></cell><cell><name type="appPart">Create New Doc. from Templ.</name> copies a basic TEI
+                        <row><cell/><cell><name type="appPart">Create New Doc. from Templ.</name> copies a basic TEI
                               document into the editor.</cell></row>
-                        <row><cell></cell><cell><name type="appPart">Check for duplicate attributes</name></cell></row>
+                        <row><cell/><cell><name type="appPart">Check for duplicate attributes</name></cell></row>
                         <row><cell>F2</cell><cell>The <name type="appPart">Show possible attributes function</name> can only be triggered
                               when the caret is at the last charcter in an element name.</cell></row>
                         <row>
@@ -189,7 +189,7 @@
                         <row><cell>CTRL+W</cell>
                            <cell><name type="appPart">Check well-formedness</name>: this function
                               controls the structural integrity of the document.</cell></row>
-                        <row><cell></cell><cell></cell></row>
+                        <row><cell/><cell/></row>
                      </table>
                   </div>
 
@@ -273,7 +273,7 @@
                      by pressing <name type="appPart">F6</name>, choosing the right
                      template and then insert the template by pressing <name type="appPart">F5</name>.
                      If you have selected any text, this will be replaced by the
-                     <name type="appPart"></name> placeholder.</p>
+                     <name type="appPart"/> placeholder.</p>
 
                   <p>When you insert a new TEI division element via the shortcut,
                      the editor automatically creates an id for the division.</p>
@@ -417,6 +417,22 @@ F = ǧ       //djim</egXML>
                      saved to a backup directory in the same directory the document is saved to.</p>
                </div>
             </div>
+            <div xml:id="dv_standoff_annotations">
+               <head>Standoff annotations</head>
+               <p><name type="application">˂TEI˃Enricher</name> allows encoders
+                  to create and modify TEI conformant standoff annotations.</p>
+
+               <div xml:id="dv_creating_standoff_annotations">
+                  <head>Creating standoff annotations</head>
+                  <p>tbd</p>
+               </div>
+
+               <div xml:id="dv_working_with_standoff_annotations">
+                  <head>Working with standoff annotations</head>
+                  <p>tbd</p>
+               </div>
+
+            </div>
 
             <div xml:id="dv_visualising_data">
                <head>Visualising Data</head>
@@ -508,9 +524,9 @@ F = ǧ       //djim</egXML>
 
                   <table>
                      <row><cell role="tdTableHead">Attribute</cell><cell role="tdTableHead">Function</cell><cell role="tdTableHead">Values</cell></row>
-                     <row><cell>inPathSegment</cell><cell>Defines the relative path where the XML document is expected.</cell><cell></cell></row>
+                     <row><cell>inPathSegment</cell><cell>Defines the relative path where the XML document is expected.</cell><cell/></row>
                      <row><cell>outPathSegment</cell><cell>This string replaces the previous one when writing
-                           the result of the transformation.</cell><cell></cell></row>
+                           the result of the transformation.</cell><cell/></row>
                   </table>
                </div>
 
@@ -676,22 +692,6 @@ F = ǧ       //djim</egXML>
                </div>
             </div>
 
-            <div xml:id="dv_standoff_annotations">
-               <head>Standoff annotations</head>
-               <p><name type="application">˂TEI˃Enricher</name> allows encoders
-                  to create and modify TEI conformant standoff annotations.</p>
-
-               <div xml:id="dv_creating_standoff_annotations">
-                  <head>Creating standoff annotations</head>
-                  <p>tbd</p>
-               </div>
-
-               <div xml:id="dv_working_with_standoff_annotations">
-                  <head>Working with standoff annotations</head>
-                  <p>tbd</p>
-               </div>
-
-            </div>
 
             <div xml:id="dv_using_macros">
                <head>Using macros</head>
@@ -1074,6 +1074,48 @@ F = ǧ       //djim</egXML>
                   <p>Then, you go back to the editor with the links, place the cursor in the attribute value you want to check,
                      select it with F9 and and perform the query (as described above) by pressing F2.</p>
                   <p><figure><graphic url="../601_imgs_raster/gotoquerylist_002.png"/></figure></p>
+               </div>
+            </div>
+            <div xml:id="dv_enricher_by_example">
+               <div xml:id="dv_transcriptions_from_emaralda_and_elan">
+               <head>Processing transcriptions from transcription programmes</head>
+                  <p>Several programmes for transcription of spoken data allow you
+                     to export your transcription in xml. The advantage of the EXMARaLDA Partitur Editor
+                     is that it provides direct export as an xml/TEI. It is a free and easy-to-use software
+                     that you can download <ref target="https://exmaralda.org/de/">here</ref>. See this
+                     website also for a manual on how to use it.
+                  </p> 
+                     <div xml:id="dv_exmaralda">
+                        <head>How to: EXMARaLDA to annotated TEI</head>
+                        <p>First, do your transcription as accurately as possible in the Partitur editor.
+                        Once the transcriptions is being processed in TEI Enricher, it becomes more complicated
+                        to correct mistakes or add things. That includes concluding the text for each event with a whitespace.
+                        Otherwise, the text is joined to the text in the nxt event whrn exporting.
+                        Be sure not to include any unnecessary signs that could cause trouble later on. Particularly
+                        punctuation marks should be used sparingly. You then export your transcription. Tick the "ISO
+                        Generic" box.
+                        Now the fun begins: You open the TEI Enricher. The easiest way to have your document embedded
+                        in the right environment, complete with the xsl files and folder structure you need, is to
+                        Open an empty text editor. On the left side of your window, do a right-click and choose to open
+                        a new document from the acdh-ch structure. Save this to where you usually save your data - ideally
+                        something like C:/User/YourUsername/Data.
+                        Open the explorer and save the TEI file with your transcription to the folder the Enricher just
+                        created. Choose "010_manannot". Go back to the TEI Enricher and open the file.
+                        In order to be able to later annotate each word, you want to split the TEI file into word units.
+                        Luckily, this is easy in the Enricher. On the righthand side, you can see a tab for "Ling. Functions."
+                        You can see that EXMARaLDA already provides you with a file that is split into utterances.
+                        That means you do not need to do any "Chunking". Skip to the next step, which is the Tokenisation.
+                        Make sure you are tokenising for each utterance element. To do that, check if "XPath" is set to //tei:u
+                        and that all the punctuation marks you used are there.
+                        When you click on "Tokenise", each word is now an element, and so is each punctiation mark. That also
+                        means that if you hyphenated, for example, a suffixed pronoun, it is now a separate token and you
+                        can proceed to annotate it.
+                        The next important thing to do is to create a unique ID on each token by clicking "Create ID on Token".
+                      
+                        </p>
+                     </div>
+                  
+                  
                </div>
             </div>
          </div>
